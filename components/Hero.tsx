@@ -32,7 +32,7 @@ const Hero = () => {
                     <h2 className="uppercase tracking-widest text-xs text-center
                     text-blue-100 wax-w-80">DEDDARA epta</h2>
                     <TextGenerateEffect
-                        duration={2} filter={false}
+                        duration={1} filter={false}
                         className="text-center text-[40px] md:text-5xl lg:text-6xl"
                         words="Developing products and make business impact"
                     />
