@@ -1,13 +1,11 @@
-"use client";
-
 import {cn} from "@/lib/utils";
-// import {BackgroundGradientAnimation} from "@/components/ui/BackgroundGradientAnimation";
-// import GridGlobe from "./GridGlobe";
-// import {useState} from "react";
-// import Lottie from "react-lottie";
-// import MagicButton from "@/components/ui/MagicButton";
-// import {IoCopyOutline} from "react-icons/io5";
-// import animationData from "@/data/confetti.json";
+import {BackgroundGradientAnimation} from "@/components/ui/BackgroundGradientAnimation";
+import GridGlobe from "./GridGlobe";
+import {useState} from "react";
+import Lottie from "react-lottie";
+import MagicButton from "@/components/ui/MagicButton";
+import {IoCopyOutline} from "react-icons/io5";
+import animationData from "@/data/confetti.json";
 
 export const BentoGrid = ({
                               className,
@@ -50,21 +48,21 @@ export const BentoGridItem = ({
     const leftLists = ["ReactJS", "Express", "Typescript"];
     const rightLists = ["VueJS", "NuxtJS", "GraphQL"];
 
-    // const [copied, setCopied] = useState(false);
+    const [copied, setCopied] = useState(false);
 
-    // const defaultOptions = {
-    //     loop: copied,
-    //     autoplay: copied,
-    //     // animationData: animationData,
-    //     rendererSettings: {
-    //         preserveAspectRatio: "xMidYMid slice",
-    //     },
-    // };
+    const defaultOptions = {
+        loop: copied,
+        autoplay: copied,
+        animationData: animationData,
+        rendererSettings: {
+            preserveAspectRatio: "xMidYMid slice",
+        },
+    };
 
-    // const handleCopy = () => {
-    //     navigator.clipboard.writeText("amirhan16616@gmail.com")
-    //     setCopied(true);
-    // }
+    const handleCopy = () => {
+        navigator.clipboard.writeText("amirhan16616@gmail.com")
+        setCopied(true);
+    }
 
     return (
         <div
@@ -105,12 +103,12 @@ export const BentoGridItem = ({
                     )}
                 </div>
 
-                {/*{id === 6 && (*/}
-                {/*    <BackgroundGradientAnimation>*/}
-                {/*        /!*<div*!/*/}
-                {/*        /!*    className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>*!/*/}
-                {/*    </BackgroundGradientAnimation>*/}
-                {/*)}*/}
+                {id === 6 && (
+                    <BackgroundGradientAnimation>
+                        {/*<div*/}
+                        {/*    className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>*/}
+                    </BackgroundGradientAnimation>
+                )}
 
                 <div
                     className={cn(
@@ -127,7 +125,7 @@ export const BentoGridItem = ({
                     >
                         {title}
                     </div>
-                    {/*{id === 2 && <GridGlobe/>}*/}
+                    {id === 2 && <GridGlobe/>}
 
                     {id === 3 && (
                         <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
@@ -158,24 +156,24 @@ export const BentoGridItem = ({
                             </div>
                         </div>
                     )}
-                    {/*{id === 6 && (*/}
-                    {/*    <div className="mt-5 relative">*/}
-                    {/*        <div*/}
-                    {/*            className={`absolute -bottom-5 right-0 ${copied ? "block" : "block"*/}
-                    {/*            }`}*/}
-                    {/*        >*/}
-                    {/*            <Lottie options={defaultOptions} height={200} width={400} />*/}
-                    {/*        </div>*/}
+                    {id === 6 && (
+                        <div className="mt-5 relative">
+                            <div
+                                className={`absolute -bottom-5 right-0 ${copied ? "block" : "block"
+                                }`}
+                            >
+                                <Lottie options={defaultOptions} height={200} width={400} />
+                            </div>
 
-                    {/*        <MagicButton*/}
-                    {/*            title={copied ? "Email is Copied!" : "Copy my email address"}*/}
-                    {/*            icon={<IoCopyOutline />}*/}
-                    {/*            position="left"*/}
-                    {/*            handleClick={handleCopy}*/}
-                    {/*            otherClasses="!bg-[#161A31]"*/}
-                    {/*        />*/}
-                    {/*    </div>*/}
-                    {/*)}*/}
+                            <MagicButton
+                                title={copied ? "Email is Copied!" : "Copy my email address"}
+                                icon={<IoCopyOutline />}
+                                position="left"
+                                handleClick={handleCopy}
+                                otherClasses="!bg-[#161A31]"
+                            />
+                        </div>
+                    )}
                 </div>
             </div>
         </div>
