@@ -3,7 +3,7 @@
 import {cn} from "@/lib/utils";
 // import {BackgroundGradientAnimation} from "@/components/ui/BackgroundGradientAnimation";
 // import GridGlobe from "./GridGlobe";
-import {useState} from "react";
+// import {useState} from "react";
 // import Lottie from "react-lottie";
 // import MagicButton from "@/components/ui/MagicButton";
 // import {IoCopyOutline} from "react-icons/io5";
@@ -50,21 +50,21 @@ export const BentoGridItem = ({
     const leftLists = ["ReactJS", "Express", "Typescript"];
     const rightLists = ["VueJS", "NuxtJS", "GraphQL"];
 
-    const [copied, setCopied] = useState(false);
+    // const [copied, setCopied] = useState(false);
 
-    const defaultOptions = {
-        loop: copied,
-        autoplay: copied,
-        // animationData: animationData,
-        rendererSettings: {
-            preserveAspectRatio: "xMidYMid slice",
-        },
-    };
+    // const defaultOptions = {
+    //     loop: copied,
+    //     autoplay: copied,
+    //     // animationData: animationData,
+    //     rendererSettings: {
+    //         preserveAspectRatio: "xMidYMid slice",
+    //     },
+    // };
 
-    const handleCopy = () => {
-        navigator.clipboard.writeText("amirhan16616@gmail.com")
-        setCopied(true);
-    }
+    // const handleCopy = () => {
+    //     navigator.clipboard.writeText("amirhan16616@gmail.com")
+    //     setCopied(true);
+    // }
 
     return (
         <div
