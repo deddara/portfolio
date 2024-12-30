@@ -38,7 +38,7 @@ const Hero = () => {
                     />
 
                     <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-                        Hi, I&apos;m Amir, a produt developer based in Paris.
+                        Hi, I&apos;m Amir, a product developer based in Paris.
                     </p>
 
                     <a href="#about">
