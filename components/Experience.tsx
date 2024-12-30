@@ -31,6 +31,7 @@ const textVariant = ({delay}: {delay: number}) => {
 
 const ExperienceCard = ({ date, iconBg, icon, company_name, title, points }: {date: string, iconBg: string,
 icon: string, company_name: string, title: string, points: string[]}) => {
+
     return (
         <VerticalTimelineElement
             contentStyle={{
