@@ -4,10 +4,10 @@ import {cn} from "@/lib/utils";
 // import {BackgroundGradientAnimation} from "@/components/ui/BackgroundGradientAnimation";
 // import GridGlobe from "./GridGlobe";
 import {useState} from "react";
-import Lottie from "react-lottie";
-import MagicButton from "@/components/ui/MagicButton";
-import {IoCopyOutline} from "react-icons/io5";
-import animationData from "@/data/confetti.json";
+// import Lottie from "react-lottie";
+// import MagicButton from "@/components/ui/MagicButton";
+// import {IoCopyOutline} from "react-icons/io5";
+// import animationData from "@/data/confetti.json";
 
 export const BentoGrid = ({
                               className,
@@ -55,7 +55,7 @@ export const BentoGridItem = ({
     const defaultOptions = {
         loop: copied,
         autoplay: copied,
-        animationData: animationData,
+        // animationData: animationData,
         rendererSettings: {
             preserveAspectRatio: "xMidYMid slice",
         },
@@ -158,24 +158,24 @@ export const BentoGridItem = ({
                             </div>
                         </div>
                     )}
-                    {id === 6 && (
-                        <div className="mt-5 relative">
-                            <div
-                                className={`absolute -bottom-5 right-0 ${copied ? "block" : "block"
-                                }`}
-                            >
-                                <Lottie options={defaultOptions} height={200} width={400} />
-                            </div>
+                    {/*{id === 6 && (*/}
+                    {/*    <div className="mt-5 relative">*/}
+                    {/*        <div*/}
+                    {/*            className={`absolute -bottom-5 right-0 ${copied ? "block" : "block"*/}
+                    {/*            }`}*/}
+                    {/*        >*/}
+                    {/*            <Lottie options={defaultOptions} height={200} width={400} />*/}
+                    {/*        </div>*/}
 
-                            <MagicButton
-                                title={copied ? "Email is Copied!" : "Copy my email address"}
-                                icon={<IoCopyOutline />}
-                                position="left"
-                                handleClick={handleCopy}
-                                otherClasses="!bg-[#161A31]"
-                            />
-                        </div>
-                    )}
+                    {/*        <MagicButton*/}
+                    {/*            title={copied ? "Email is Copied!" : "Copy my email address"}*/}
+                    {/*            icon={<IoCopyOutline />}*/}
+                    {/*            position="left"*/}
+                    {/*            handleClick={handleCopy}*/}
+                    {/*            otherClasses="!bg-[#161A31]"*/}
+                    {/*        />*/}
+                    {/*    </div>*/}
+                    {/*)}*/}
                 </div>
             </div>
         </div>
