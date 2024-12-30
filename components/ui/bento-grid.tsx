@@ -2,7 +2,7 @@
 
 import {cn} from "@/lib/utils";
 import {BackgroundGradientAnimation} from "@/components/ui/BackgroundGradientAnimation";
-import GridGlobe from "./GridGlobe";
+// import GridGlobe from "./GridGlobe";
 import {useState} from "react";
 import Lottie from "react-lottie";
 import MagicButton from "@/components/ui/MagicButton";
@@ -127,7 +127,7 @@ export const BentoGridItem = ({
                     >
                         {title}
                     </div>
-                    {id === 2 && <GridGlobe/>}
+                    {/*{id === 2 && <GridGlobe/>}*/}
 
                     {id === 3 && (
                         <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
