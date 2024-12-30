@@ -23,6 +23,7 @@ const textVariant = ({delay}: {delay: number}) => {
             transition: {
                 type: "spring",
                 duration: 1.25,
+                delay: delay
             },
         },
     };

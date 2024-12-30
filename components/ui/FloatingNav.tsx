@@ -1,12 +1,12 @@
 "use client";
-import React, { useState } from "react";
+import React, {useState} from "react";
 import {
     motion,
     AnimatePresence,
     useScroll,
     useMotionValueEvent,
 } from "framer-motion";
-import { cn } from "@/lib/utils";
+import {cn} from "@/lib/utils";
 import Link from "next/link";
 
 export const FloatingNav = ({
@@ -20,14 +20,14 @@ export const FloatingNav = ({
     }[];
     className?: string;
 }) => {
-    const { scrollYProgress } = useScroll();
+    const {scrollYProgress} = useScroll();
 
     const [visible, setVisible] = useState(false);
 
     useMotionValueEvent(scrollYProgress, "change", (current) => {
         // Check if current is not undefined and is a number
         if (typeof current === "number") {
-            let direction = current! - scrollYProgress.getPrevious()!;
+            const direction = current! - scrollYProgress.getPrevious()!;
 
             if (scrollYProgress.get() < 0.05) {
                 setVisible(false);
@@ -60,7 +60,11 @@ export const FloatingNav = ({
                     className
                 )}
             >
-                {navItems.map((navItem: any, idx: number) => (
+                {navItems.map((navItem: {
+                    name: string;
+                    link: string;
+                    icon?: JSX.Element;
+                }, idx: number) => (
                     <Link
                         key={`link=${idx}`}
                         href={navItem.link}
