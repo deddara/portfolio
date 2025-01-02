@@ -10,24 +10,7 @@ import {
 import { motion } from "framer-motion";
 
 import { experiences } from "@/data";
-
-const textVariant = ({delay}: {delay: number}) => {
-    return {
-        hidden: {
-            y: -50,
-            opacity: 0,
-        },
-        show: {
-            y: 0,
-            opacity: 1,
-            transition: {
-                type: "spring",
-                duration: 1.25,
-                delay: delay
-            },
-        },
-    };
-};
+import {textVariant} from "@/lib/utils";
 
 const ExperienceCard = ({ date, iconBg, icon, company_name, title, points }: {date: string, iconBg: string,
 icon: string, company_name: string, title: string, points: string[]}) => {
@@ -80,7 +63,8 @@ const Experience = () => {
 
     return (
         <>
-            <motion.div variants={textVariant({ delay: 3 })}>
+            <motion.div variants={textVariant({ delay: 0 })} initial="hidden"
+                        whileInView="show" viewport={{ once: true, amount: 0.2 }}>
                 <p className={`text-[#dfd9ff] font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px] text-center`}>
                     What I have done so far
                 </p>
