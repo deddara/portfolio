@@ -31,15 +31,15 @@ const Hero = () => {
                 <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex
             flex-col items-center justify-center">
                     <h2 className="uppercase tracking-widest text-xs text-center
-                    text-blue-100 wax-w-80">DEDDARA epta</h2>
+                    text-blue-100 wax-w-80">WELCOME TO MY WORLD</h2>
                     <TextGenerateEffect
                         duration={1} filter={false}
                         className="text-center text-[40px] md:text-5xl lg:text-6xl"
-                        words="Developing products and make business impact"
+                        words="I build scalable solutions to drive product growth & innovation."
                     />
 
                     <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-                        Hi, I&apos;m Amir, a product developer based in Paris.
+                        Hi! I&apos;m <strong>Amir</strong>, a Product Developer & Senior Backend Engineer based in Paris.
                     </p>
 
                     <a href="#about">

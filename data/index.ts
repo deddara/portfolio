@@ -1,19 +1,20 @@
 export const navItems = [
     { name: "About", link: "#about" },
+    { name: "Experience", link: "#experience" },
     { name: "Projects", link: "#projects" },
-    { name: "Testimonials", link: "#testimonials" },
     { name: "Contact", link: "#contact" },
 ];
 
 export const gridItems = [
     {
         id: 1,
-        title: "I prioritize client collaboration, fostering open communication ",
+        title: "I focus on delivering reliable, secure backend solutions \n" +
+            "                and robust product features.",
         description: "",
         className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
         imgClassName: "w-full h-full",
         titleClassName: "justify-end",
-        img: "/b1.svg",
+        img: "/16.jpg",
         spareImg: "",
     },
     {
@@ -49,7 +50,7 @@ export const gridItems = [
 
     {
         id: 5,
-        title: "Currently building a JS Animation library",
+        title: "Passionate about microservices, DDD, and zero-downtime deployments.",
         description: "The Inside Scoop",
         className: "md:col-span-3 md:row-span-2",
         imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
@@ -59,7 +60,7 @@ export const gridItems = [
     },
     {
         id: 6,
-        title: "Do you want to start a project together?",
+        title: "Let’s solve real-world challenges.",
         description: "",
         className: "lg:col-span-2 md:col-span-3 md:row-span-1",
         imgClassName: "",
@@ -72,132 +73,50 @@ export const gridItems = [
 export const projects = [
     {
         id: 1,
-        title: "3D Solar System Planets to Explore",
-        des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-        img: "/p1.svg",
-        iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-        link: "https://github.com/adrianhajdin?tab=repositories",
+        title: "Burnout problem",
+        des: "A hackathon solution tackling emotional burnout in remote learning, built with React + TypeScript, " +
+            "that placed 1st in the Junction 2020 Kazan campus.",
+        img: "/burnout.webp",
+        urlImg: "/youtube.svg",
+        iconLists: ["/telegram.svg", "/ts.svg", "/re.svg", "/tail.svg"],
+        link: "https://www.youtube.com/watch?v=s-PjsfRpamM&ab_channel=zkerriga",
     },
     {
         id: 2,
-        title: "Yoom - Video Conferencing App",
-        des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-        img: "/p2.svg",
-        iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-        link: "https://github.com/adrianhajdin/zoom-clone",
+        title: "Water consumption",
+        des: "An IoT-based project from Junction 2021 that visualizes real-time water usage, " +
+            "encouraging sustainable habits through React and JavaScript dashboards.",
+        urlImg: "/youtube.svg",
+        img: "/water-consumption.webp",
+        iconLists: ["/js.svg", "re.svg", "/tail.svg"],
+        link: "https://www.youtube.com/watch?v=jsw0MfUus-o&ab_channel=zkerriga",
     },
     {
         id: 3,
-        title: "AI Image SaaS - Canva Application",
-        des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-        img: "/p3.svg",
-        iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-        link: "https://github.com/adrianhajdin/ai_saas_app",
+        title: "Wolfenstein",
+        des: "A custom raycasting engine in C inspired by Wolfenstein 3D, showcasing advanced low-level graphics, collision detection, and math-driven optimizations.",
+        img: "/wolf3d.jpg",
+        urlImg: "/git.svg",
+        iconLists: ["/c.svg"],
+        link: "https://github.com/deddara/cub3d",
     },
     {
         id: 4,
-        title: "Animated Apple Iphone 3D Website",
-        des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-        img: "/p4.svg",
-        iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-        link: "https://github.com/adrianhajdin/iphone",
-    },
-];
-
-export const testimonials = [
-    {
-        quote:
-            "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-        name: "Michael Johnson",
-        title: "Director of AlphaStream Technologies",
-    },
-    {
-        quote:
-            "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-        name: "Michael Johnson",
-        title: "Director of AlphaStream Technologies",
-    },
-    {
-        quote:
-            "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-        name: "Michael Johnson",
-        title: "Director of AlphaStream Technologies",
-    },
-    {
-        quote:
-            "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-        name: "Michael Johnson",
-        title: "Director of AlphaStream Technologies",
-    },
-    {
-        quote:
-            "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-        name: "Michael Johnson",
-        title: "Director of AlphaStream Technologies",
-    },
-];
-
-export const companies = [
-    {
-        id: 1,
-        name: "cloudinary",
-        img: "/cloud.svg",
-        nameImg: "/cloudName.svg",
-    },
-    {
-        id: 2,
-        name: "appwrite",
-        img: "/app.svg",
-        nameImg: "/appName.svg",
-    },
-    {
-        id: 3,
-        name: "HOSTINGER",
-        img: "/host.svg",
-        nameImg: "/hostName.svg",
-    },
-    {
-        id: 4,
-        name: "stream",
-        img: "/s.svg",
-        nameImg: "/streamName.svg",
+        title: "Ping Pong",
+        des: "A social network where users can play online ping pong, create guilds, and track matches in real time, built with Next.js, Tailwind, and TypeScript.",
+        img: "/ping-pong.png",
+        urlImg: "/git.svg",
+        iconLists: ["/js.svg", "/rb.svg"],
+        link: "https://github.com/deddara/ft_transcendense/",
     },
     {
         id: 5,
-        name: "docker.",
-        img: "/dock.svg",
-        nameImg: "/dockerName.svg",
-    },
-];
-
-export const workExperience = [
-    {
-        id: 1,
-        title: "Frontend Engineer Intern",
-        desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
-        className: "md:col-span-2",
-        thumbnail: "/exp1.svg",
-    },
-    {
-        id: 2,
-        title: "Mobile App Dev - JSM Tech",
-        desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
-        className: "md:col-span-2", // change to md:col-span-2
-        thumbnail: "/exp2.svg",
-    },
-    {
-        id: 3,
-        title: "Freelance App Dev Project",
-        desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
-        className: "md:col-span-2", // change to md:col-span-2
-        thumbnail: "/exp3.svg",
-    },
-    {
-        id: 4,
-        title: "Lead Frontend Developer",
-        desc: "Developed and maintained user-facing features using modern frontend technologies.",
-        className: "md:col-span-2",
-        thumbnail: "/exp4.svg",
+        title: "HTTP Server",
+        des: "A lightweight C++ server for parsing HTTP requests, routing, and concurrency, demonstrating networking fundamentals and efficient resource management.",
+        img: "http-server.webp",
+        urlImg: "/git.svg",
+        iconLists: ["/c++.svg"],
+        link: "https://github.com/deddara/webserv",
     },
 ];
 
@@ -205,68 +124,42 @@ export const socialMedia = [
     {
         id: 1,
         img: "/git.svg",
-    },
-    {
-        id: 2,
-        img: "/twit.svg",
+        url: "https://github.com/deddara"
     },
     {
         id: 3,
         img: "/link.svg",
+        url: "https://www.linkedin.com/in/deddara/"
     },
 ];
 
 export const experiences = [
     {
-        title: "React.js Developer",
-        company_name: "Starbucks",
-        icon: "/twit.svg",
-        iconBg: "#383E56",
-        date: "March 2020 - April 2021",
+        title: "Kotlin/Java Backend Developer",
+        company_name: "Sberbank",
+        icon: "/sber-bw.svg",
+        iconBg: "#7DC244",
+        date: "April 2021 - April 2022",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Contributed to high-traffic financial platforms, focusing on reliability & performance.",
+            "Enhanced monitoring with Grafana and ElasticSearch, reducing incident resolution by 30%.",
+            "Contributed to the creation of Sberbank's largest deposit product, serving millions of users.",
+            "Developed backend features for dashboards, enabling better insights for employees.",
+            "Scaled systems to serve millions of users with near-zero downtime.",
         ],
     },
     {
-        title: "React Native Developer",
-        company_name: "Tesla",
-        icon: "/twit.svg",
-        iconBg: "#E6DEDD",
-        date: "Jan 2021 - Feb 2022",
+        title: "Kotlin/Java Product Developer",
+        company_name: "Qiwi",
+        icon: "/qiwi-bw.svg",
+        iconBg: "#FF8C00",
+        date: "April 2022 - June 2024",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
-        ],
-    },
-    {
-        title: "Web Developer",
-        company_name: "Shopify",
-        icon: "/twit.svg",
-        iconBg: "#383E56",
-        date: "Jan 2022 - Jan 2023",
-        points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
-        ],
-    },
-    {
-        title: "Full stack Developer",
-        company_name: "Meta",
-        icon: "/twit.svg",
-        iconBg: "#E6DEDD",
-        date: "Jan 2023 - Present",
-        points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Led payday loan service, influencing business decisions and architecture, serving ~50k clients.",
+            "Authored high-quality Kotlin code with Spring Boot, reducing production incidents by 30%.",
+            "Contributed React (TypeScript) features to expedite product launches.",
+            "Implemented microservices to handle 10,000+ concurrent users, boosting scalability by 40%.",
+            "Leveraged AWS services (S3, SQS) to build distributed, fault-tolerant systems."
         ],
     },
 ];

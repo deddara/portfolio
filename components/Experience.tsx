@@ -37,7 +37,7 @@ icon: string, company_name: string, title: string, points: string[]}) => {
             <div>
                 <h3 className='text-white text-[24px] font-bold'>{title}</h3>
                 <p
-                    className='text-secondary text-[16px] font-semibold'
+                    className='text-[#C1C2D3] text-[16px] font-semibold'
                     style={{ margin: 0 }}
                 >
                     {company_name}
@@ -62,14 +62,14 @@ icon: string, company_name: string, title: string, points: string[]}) => {
 const Experience = () => {
 
     return (
-        <>
+        <div id="experience">
             <motion.div variants={textVariant({ delay: 0 })} initial="hidden"
                         whileInView="show" viewport={{ once: true, amount: 0.2 }}>
                 <p className={`text-[#dfd9ff] font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px] text-center`}>
-                    What I have done so far
+                    Where I made an impact
                 </p>
                 <h2 className="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px] text-center">
-                    Work Experience.
+                    Work Experience
                 </h2>
             </motion.div>
 
@@ -88,7 +88,7 @@ const Experience = () => {
                     ))}
                 </VerticalTimeline>
             </div>
-        </>
+        </div>
     );
 }
 
