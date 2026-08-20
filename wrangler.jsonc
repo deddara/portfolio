@@ -1,0 +1,11 @@
+{
+  // ВАЖНО: "name" должен совпадать с именем твоего Worker'а в дашборде
+  // (Workers & Pages -> твой проект -> имя вверху). Если оно другое - поменяй тут.
+  "name": "portfolio",
+  "compatibility_date": "2025-08-20",
+  // Раздаём статический экспорт Next.js (next build с output:'export' кладёт файлы в out/)
+  // как Static Assets. Worker-скрипт (main) не нужен - это чисто статика.
+  "assets": {
+    "directory": "./out"
+  }
+}
