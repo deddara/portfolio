@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# внутренние документы: репозиторий публичный, выгрузки Confluence сюда попадать не должны
+*Confluence.html
+/.agent/

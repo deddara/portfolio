@@ -2,12 +2,12 @@
 import { useEffect, useRef, useState } from "react";
 import { Color, Scene, Fog, PerspectiveCamera, Vector3 } from "three";
 import ThreeGlobe from "three-globe";
-import { useThree, Object3DNode, Canvas, extend } from "@react-three/fiber";
+import { useThree, ThreeElement, Canvas, extend } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import countries from "@/data/globe.json";
 declare module "@react-three/fiber" {
     interface ThreeElements {
-        threeGlobe: Object3DNode<ThreeGlobe, typeof ThreeGlobe>;
+        threeGlobe: ThreeElement<typeof ThreeGlobe>;
     }
 }
 
@@ -185,9 +185,10 @@ export function Globe({ globeConfig, data }: WorldProps) {
             .arcDashGap(15)
             .arcDashAnimateTime(() => defaultProps.arcTime);
 
+        // точкам нужны поля lat/lng, поэтому здесь globeData, а не сырые дуги
         globeRef.current
-            .pointsData(data)
-            .pointColor((e) => (e as { color: string }).color)
+            .pointsData(globeData)
+            .pointColor((e) => (e as { color: (t: number) => string }).color(0))
             .pointsMerge(true)
             .pointAltitude(0.0)
             .pointRadius(2);
@@ -209,8 +210,8 @@ export function Globe({ globeConfig, data }: WorldProps) {
             if (!globeRef.current || !globeData) return;
             numbersOfRings = genRandomNumbers(
                 0,
-                data.length,
-                Math.floor((data.length * 4) / 5)
+                globeData.length,
+                Math.floor((globeData.length * 4) / 5)
             );
 
             globeRef.current.ringsData(

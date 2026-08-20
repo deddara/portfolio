@@ -1,14 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+    // статический экспорт в out/, раздаётся Cloudflare Worker'ом как Static Assets
     output: "export",
     images: {
         unoptimized: true,
     },
-    typescript: {
-        ignoreBuildErrors: true,
-    }
 };
 
 export default nextConfig;
