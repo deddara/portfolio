@@ -18,7 +18,7 @@ icon: string, company_name: string, title: string, points: string[]}) => {
     return (
         <VerticalTimelineElement
             contentStyle={{
-                background: "#1d1836",
+                background: "#10132E",
                 color: "#fff",
             }}
             contentArrowStyle={{ borderRight: "7px solid  #232631" }}
@@ -28,7 +28,8 @@ icon: string, company_name: string, title: string, points: string[]}) => {
                 <div className='flex justify-center items-center w-full h-full'>
                     <img
                         src={icon}
-                        alt={company_name}
+                        alt=""
+                        aria-hidden="true"
                         className='w-[60%] h-[60%] object-contain'
                     />
                 </div>

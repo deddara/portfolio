@@ -1,22 +1,24 @@
 
 import type {Metadata} from "next";
-import {Geist, Geist_Mono} from "next/font/google";
+import {Inter, Space_Grotesk} from "next/font/google";
 import "./globals.css";
 import {ThemeProvider} from "@/app/providers";
 
-const geistSans = Geist({
-    variable: "--font-geist-sans",
+const sans = Inter({
+    variable: "--font-sans",
     subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
+const display = Space_Grotesk({
+    variable: "--font-display",
     subsets: ["latin"],
+    weight: ["500", "700"],
 });
 
 export const metadata: Metadata = {
-    title: "Amir's portfolio",
-    description: "Senior Backend Engineer & Product Developer with expertise in building scalable, service-oriented architectures.",
+    title: "Amir Muratov - Go Backend Engineer",
+    description: "Backend engineer at 2GIS building the Otello hotel booking platform in Go. " +
+        "Bookings, payments and admin tooling; features led from requirements to release.",
 };
 
 export default function RootLayout({
@@ -27,7 +29,7 @@ export default function RootLayout({
     return (
         <html lang="en" suppressHydrationWarning>
         <body
-            className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+            className={`${sans.variable} ${display.variable} antialiased`}
         >
         <ThemeProvider
             attribute="class"

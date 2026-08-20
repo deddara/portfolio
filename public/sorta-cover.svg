@@ -1,0 +1,45 @@
+<svg width="720" height="460" viewBox="0 0 720 460" xmlns="http://www.w3.org/2000/svg" role="img">
+    <title>Sorta - AI inventory for moving and decluttering</title>
+    <defs>
+        <style>
+            .s-mono { font-family: "IBM Plex Mono", "SF Mono", Menlo, Consolas, monospace; }
+            .s-sans { font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif; }
+        </style>
+    </defs>
+
+    <rect width="720" height="460" fill="#F4F2EE"/>
+
+    <g class="s-mono" fill="#8C8880" font-size="18" letter-spacing="4">
+        <text x="56" y="76">THESORTA.COM</text>
+    </g>
+
+    <g class="s-sans" fill="#141310">
+        <text x="56" y="182" font-size="88" font-weight="700" letter-spacing="-3">Sorta</text>
+        <text x="56" y="228" class="s-sans" font-size="24" font-weight="400" fill="#4A463F">
+            Photograph your things. Get them priced.
+        </text>
+        <text x="56" y="262" class="s-sans" font-size="24" font-weight="400" fill="#4A463F">
+            Decide what moves with you.
+        </text>
+    </g>
+
+    <g class="s-mono" font-size="20" font-weight="500">
+        <rect x="56" y="318" width="118" height="52" rx="12" fill="#141310"/>
+        <text x="115" y="344" fill="#F4F2EE" text-anchor="middle" dominant-baseline="central">sell</text>
+
+        <rect x="186" y="318" width="118" height="52" rx="12" fill="none" stroke="#C9C4BA" stroke-width="2"/>
+        <text x="245" y="344" fill="#4A463F" text-anchor="middle" dominant-baseline="central">take</text>
+
+        <rect x="316" y="318" width="118" height="52" rx="12" fill="none" stroke="#C9C4BA" stroke-width="2"/>
+        <text x="375" y="344" fill="#4A463F" text-anchor="middle" dominant-baseline="central">store</text>
+
+        <rect x="446" y="318" width="118" height="52" rx="12" fill="none" stroke="#C9C4BA" stroke-width="2"/>
+        <text x="505" y="344" fill="#4A463F" text-anchor="middle" dominant-baseline="central">toss</text>
+    </g>
+
+    <g opacity="0.5">
+        <circle cx="612" cy="128" r="64" fill="none" stroke="#C9C4BA" stroke-width="2"/>
+        <circle cx="612" cy="128" r="40" fill="none" stroke="#C9C4BA" stroke-width="2"/>
+        <circle cx="612" cy="128" r="16" fill="#C9C4BA"/>
+    </g>
+</svg>

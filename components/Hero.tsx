@@ -12,7 +12,7 @@ const Hero = () => {
                 <Spotlight className="-top-40 -left-10
                 md:-left-32 md:-top-20 h-screen" fill="white"/>
                 <Spotlight className="top-10 left-full h-[80vh]
-                w-[50vw]" fill="purple"/>
+                w-[50vw]" fill="#5BD8F0"/>
                 <Spotlight className="top-28 left-80 h-[80vh] w-
                 [50vw]" fill="blue"/>
             </div>
@@ -31,15 +31,16 @@ const Hero = () => {
                 <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex
             flex-col items-center justify-center">
                     <h2 className="uppercase tracking-widest text-xs text-center
-                    text-blue-100 wax-w-80">WELCOME TO MY WORLD</h2>
+                    text-blue-100 wax-w-80">OPEN TO GO BACKEND ROLES</h2>
                     <TextGenerateEffect
                         duration={1} filter={false}
-                        className="text-center text-[40px] md:text-5xl lg:text-6xl"
-                        words="I build scalable solutions to drive product growth & innovation."
+                        className="font-display text-center text-[40px] md:text-5xl lg:text-6xl"
+                        words="I build Go services for bookings and payments that cannot fail."
                     />
 
                     <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-                        Hi! I&apos;m <strong>Amir</strong>, a Product Developer & Senior Backend Engineer based in Paris.
+                        Hi! I&apos;m <strong>Amir</strong>, a backend engineer at 2GIS, building the Otello hotel booking
+                        platform in Go. Based in Paris, I lead features from requirements to release.
                     </p>
 
                     <a href="#about">

@@ -1,10 +1,12 @@
 import {cn} from "@/lib/utils";
 import {BackgroundGradientAnimation} from "@/components/ui/BackgroundGradientAnimation";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import MagicButton from "@/components/ui/MagicButton";
 import {IoCopyOutline} from "react-icons/io5";
 import animationData from "@/data/confetti.json";
 import dynamic from "next/dynamic";
+import {contactEmail} from "@/data";
+import {copyToClipboard} from "@/lib/clipboard";
 
 // Lazy-load GridGlobe, disable SSR, and optionally show a fallback
 const SafeGridGlobe = dynamic(() => import("./GridGlobe"), {
@@ -56,25 +58,51 @@ export const BentoGridItem = ({
     titleClassName?: string;
     spareImg?: string;
 }) => {
-    const leftLists = ["Maven", "Kotlin", "Java"];
-    const rightLists = ["Spring Boot", "Kafka", "SQL"];
+    const leftLists = ["Go", "Kotlin", "Java"];
+    const rightLists = ["Postgres", "Spring Boot", "Kafka"];
 
     const [copied, setCopied] = useState(false);
+    // Reason: в in-app браузерах недоступны и Clipboard API, и execCommand. Вместо
+    // молчаливой кнопки показываем сам адрес, чтобы его можно было выделить руками.
+    const [copyFailed, setCopyFailed] = useState(false);
+    // Reason: react-lottie не перезапускает анимацию при смене autoplay, поэтому
+    // конфетти перемонтируется через key при каждом успешном копировании.
+    const [confettiRun, setConfettiRun] = useState(0);
 
-    const defaultOptions = {
-        loop: copied,
-        autoplay: copied,
+    const confettiOptions = {
+        loop: false,
+        autoplay: confettiRun > 0,
         animationData: animationData,
         rendererSettings: {
             preserveAspectRatio: "xMidYMid slice",
         },
     };
 
-    const handleCopy = () => {
-        const text = "amirhan16616@gmail.com";
-        navigator.clipboard.writeText(text);
+    useEffect(() => {
+        if (!copied) return;
+
+        const timer = setTimeout(() => setCopied(false), 2500);
+        return () => clearTimeout(timer);
+    }, [copied]);
+
+    const handleCopy = async () => {
+        const ok = await copyToClipboard(contactEmail);
+
+        if (!ok) {
+            setCopyFailed(true);
+            return;
+        }
+
+        setCopyFailed(false);
         setCopied(true);
+        setConfettiRun((run) => run + 1);
     };
+
+    const copyButtonTitle = copied
+        ? "Email is Copied!"
+        : copyFailed
+            ? contactEmail
+            : "Copy my email address";
 
     return (
         <div
@@ -97,7 +125,8 @@ export const BentoGridItem = ({
                     {img && (
                         <img
                             src={img}
-                            alt={img}
+                            alt=""
+                            aria-hidden="true"
                             className={cn(imgClassName, "object-cover object-center ")}
                         />
                     )}
@@ -109,15 +138,23 @@ export const BentoGridItem = ({
                     {spareImg && (
                         <img
                             src={spareImg}
-                            alt={spareImg}
-                            //   width={220}
+                            alt=""
+                            aria-hidden="true"
                             className="object-cover object-center w-full h-full"
                         />
                     )}
                 </div>
                 {id === 6 && (
-                    // add background animation , remove the p tag
-                    <BackgroundGradientAnimation>
+                    <BackgroundGradientAnimation
+                        gradientBackgroundStart="rgb(6, 58, 92)"
+                        gradientBackgroundEnd="rgb(0, 17, 82)"
+                        firstColor="18, 113, 255"
+                        secondColor="40, 200, 220"
+                        thirdColor="100, 220, 255"
+                        fourthColor="20, 120, 160"
+                        fifthColor="90, 216, 240"
+                        pointerColor="91, 216, 240"
+                    >
                         <div
                             className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
                     </BackgroundGradientAnimation>
@@ -134,7 +171,7 @@ export const BentoGridItem = ({
                         {description}
                     </div>
                     <div
-                        className={`font-sans text-lg lg:text-3xl max-w-96 font-bold z-10`}
+                        className={`font-display text-lg lg:text-3xl max-w-96 font-bold z-10`}
                     >
                         {title}
                     </div>
@@ -174,24 +211,24 @@ export const BentoGridItem = ({
                     )}
                     {id === 6 && (
                         <div className="mt-5 relative">
-                            {/* button border magic from tailwind css buttons  */}
-                            {/* add rounded-md h-8 md:h-8, remove rounded-full */}
-                            {/* remove focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 */}
-                            {/* add handleCopy() for the copy the text */}
                             <div
-                                className={`absolute -bottom-5 right-0 ${copied ? "block" : "block"
-                                }`}
-                            >
-                                {/* <img src="/confetti.gif" alt="confetti" /> */}
-                                <Lottie options={defaultOptions} height={200} width={400}/>
+                                className="pointer-events-none absolute -bottom-5 right-0 max-w-full overflow-hidden">
+                                {confettiRun > 0 && (
+                                    <Lottie
+                                        key={confettiRun}
+                                        options={confettiOptions}
+                                        height={200}
+                                        width={400}
+                                    />
+                                )}
                             </div>
 
                             <MagicButton
-                                title={copied ? "Email is Copied!" : "Copy my email address"}
+                                title={copyButtonTitle}
                                 icon={<IoCopyOutline/>}
                                 position="left"
                                 handleClick={handleCopy}
-                                otherClasses="!bg-[#161A31]"
+                                otherClasses={`!bg-[#161A31] ${copyFailed ? "select-all text-xs" : ""}`}
                             />
                         </div>
                     )}

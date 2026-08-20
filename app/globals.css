@@ -71,7 +71,10 @@
         @apply border-border !scroll-smooth;
     }
     body {
-        @apply bg-background text-foreground;
+        @apply bg-background text-foreground font-sans;
+    }
+    h1, h2, h3 {
+        @apply font-display;
     }
     button {
         @apply active:outline-none;
@@ -80,7 +83,7 @@
 
 @layer utilities {
     .heading {
-        @apply font-bold text-4xl md:text-5xl text-center;
+        @apply font-display font-bold text-4xl md:text-5xl text-center;
     }
 
     .black-gradient {

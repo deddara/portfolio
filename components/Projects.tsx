@@ -29,20 +29,24 @@ const ProjectCard = ({index, title, des, img, urlImg, iconLists, link}: {
                 <div className="relative w-full h-[230px]">
                     <img
                         src={img}
-                        alt="project_image"
+                        alt={`${title} preview`}
                         className="w-full h-full object-cover rounded-2xl"
                     />
                     <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
-                        <div
-                            onClick={() => window.open(link, "_blank")}
+                        <a
+                            href={link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`Open ${title}`}
                             className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
                         >
                             <img
                                 src={urlImg}
-                                alt="source code"
+                                alt=""
+                                aria-hidden="true"
                                 className="w-1/2 h-1/2 object-contain"
                             />
-                        </div>
+                        </a>
                     </div>
                 </div>
 
@@ -65,7 +69,7 @@ const ProjectCard = ({index, title, des, img, urlImg, iconLists, link}: {
                                     transform: `translateX(-${5 * iconIndex * 2}px)`,
                                 }}
                             >
-                                <img src={icon} alt={icon} className="p-2"/>
+                                <img src={icon} alt="" aria-hidden="true" className="p-2"/>
                             </div>
                         ))}
                     </div>
@@ -94,9 +98,9 @@ const Projects = () => {
                           whileInView="show" viewport={{once: true, amount: 0.2}}
                           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px] text-white"
                 >
-                    Below are some notable projects and hackathon contributions I’ve made.
-                    I enjoy tackling complex challenges, leveraging distributed systems,
-                    and optimizing architectures for scale.
+                    Sorta is what I’m building right now, end to end and in production.
+                    The rest is hackathon and low-level systems work I keep around,
+                    because that is where the fundamentals came from.
                 </motion.p>
             </div>
 

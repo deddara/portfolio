@@ -28,7 +28,9 @@ export const TextGenerateEffect = ({
                 delay: stagger(0.2),
             }
         );
-    }, [scope.current]);
+        // Reason: scope.current в зависимостях бессмысленно - мутация ref не вызывает
+        // ре-рендер. Анимация должна проигрываться один раз на смену текста.
+    }, [animate, words, filter, duration]);
 
     const renderWords = () => {
         return (
@@ -37,7 +39,7 @@ export const TextGenerateEffect = ({
                     return (
                         <motion.span
                             key={word + idx}
-                            className={`${idx > 6 ? 'text-purple' : 'dark:text-white text-black' } opacity-0`}
+                            className={`${idx > 6 ? 'text-brand' : 'dark:text-white text-black' } opacity-0`}
                             style={{
                                 filter: filter ? "blur(10px)" : "none",
                             }}
