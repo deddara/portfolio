@@ -151,7 +151,7 @@ export const experiences = [
         company_name: "2GIS - Otello",
         icon: "/2gis-bw.svg",
         iconBg: "#19AA1E",
-        date: "June 2024 - Present",
+        date: "June 2025 - Present",
         points: [
             "Owned guest relocations end to end as feature lead: a two-month team effort replacing manual rehousing by support, who used to rebook stranded guests by hand and occasionally pay with personal cards.",
             "Every relocation now creates its own booking and payment, links them to the original order and writes the whole chain into history, instead of the trail living in support chat logs.",
@@ -166,7 +166,7 @@ export const experiences = [
         company_name: "Qiwi",
         icon: "/qiwi-bw.svg",
         iconBg: "#FF8C00",
-        date: "April 2022 - June 2024",
+        date: "April 2022 - June 2025",
         points: [
             "Led payday loan service, influencing business decisions and architecture, serving ~50k clients.",
             "Authored high-quality Kotlin code with Spring Boot, reducing production incidents by 30%.",
